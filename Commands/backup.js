@@ -37,6 +37,7 @@ module.exports = class backup {
         )
         .setColor("#a11616");
 
+ if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply('You need Administrator permissions to run this command.')
       if (message.channel.type === "dm")
         return message.channel.send(guildsonlyEmbed);
       if (message.author.bot) return message.channel.send(usersonlyEmbed);
